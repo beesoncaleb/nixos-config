@@ -5,7 +5,7 @@
   ...
 }: 
 let
-  defaultEnvVar = {
+  defaultBashAliases = {
       vi      = "nvim .";
       dr      = "tree -L";
       dra     = "tree -La";
@@ -15,20 +15,20 @@ let
   };
 in {
 
-  options.customBashEnvVariables = lib.mkOption {
+  options.custom.extraBashAliases = lib.mkOption {
     type = lib.types.attrs;
     default = {};
-    description = "additional Bash environment variables aside from the defaults";
+    description = "Additional Bash aliases";
   };
 
   config.programs.bash = {
     enable = true;
 
-    sessionVariables = (defaultEnvVar // config.customBashEnvVariables);
+    shellAliases = (defaultBashAliases // config.custom.extraBashAliases);
 
     # fix to source environment variables in ~/.profile
     initExtra = ''
-      [[ -f ~/.profile ]] &&  source ~/.profile
+      [ -f ~/.profile ] && source ~/.profile
     '';
   };
 }
