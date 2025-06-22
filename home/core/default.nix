@@ -6,6 +6,7 @@
 
   imports = [
     ./bash.nix
+    ./office-suite
     #./neovim.nix
   ];
 

@@ -43,7 +43,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
 
-                users.${username} = ./users/${username}/home.nix;
+                users.${username} = import ./users/${username}/home.nix;
               };
             }
           ];

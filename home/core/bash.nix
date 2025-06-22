@@ -5,25 +5,30 @@
   ...
 }: 
 let
-  defaultEnvVar = [
-      "export vi='nvim .'"
-      "export dr='tree -L'"
-      "export dra='tree -La'"
-      "export la='ls -la'"
-      "export rebuild='sudo nixos-rebuild switch --flake ~/.nixos#nix-thinkpad'"
-      "export listgen='nixos-rebuild list-generations'"
-  ];
+  defaultEnvVar = {
+      vi      = "nvim .";
+      dr      = "tree -L";
+      dra     = "tree -La";
+      la      = "ls -la";
+      rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#nix-thinkpad";
+      listgen = "nixos-rebuild list-generations";
+  };
 in {
 
   options.customBashEnvVariables = lib.mkOption {
-    type = lib.types.listOf lib.types.str;
-    default = [];
+    type = lib.types.attrs;
+    default = {};
     description = "additional Bash environment variables aside from the defaults";
   };
 
   config.programs.bash = {
     enable = true;
 
-    shellInit = lib.concatStringsSep "\n" (defaultEnvVar ++ config.customBashEnvVariables);
+    sessionVariables = (defaultEnvVar // config.customBashEnvVariables);
+
+    # fix to source environment variables in ~/.profile
+    initExtra = ''
+      [[ -f ~/.profile ]] &&  source ~/.profile
+    '';
   };
 }
