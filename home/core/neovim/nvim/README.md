@@ -8,3 +8,10 @@ Currenlty using Lazy plugin manager
 - ufo
 - onedark
 - telescope
+
+# TO DO
+- Add vim fugitive for git stuff
+- Add a history tree
+- Add harpoon
+- Look into an LSP maybe?
+
