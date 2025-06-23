@@ -4,23 +4,16 @@
   ... 
 }: {
 
-  services = {
-
-    # TAG - Configure notification daemon later when ricing
-    dunst = {
-      enable = true;
-    };
-
-    swww.enable = true;
-  };
+  imports = [
+    ./waybar
+    ./hyprland
+    ./dunst.nix
+    ./swww
+  ];
 
   programs = {
     wofi.enable = true;
   };
 
-  imports = [
-    ./waybar
-    ./hyprland
-  ];
 
 }
