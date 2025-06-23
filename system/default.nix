@@ -18,7 +18,7 @@
   # System level packages
   environment.systemPackages = with pkgs; [
     wget
-    neovim
+    vim
     tree
     wev
     openssl
