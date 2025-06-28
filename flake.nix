@@ -10,10 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    #nixvim = {
-    #  url = "github:nix-community/nixvim";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -22,6 +22,7 @@
 
       nix-thinkpad = let
         username = "beeso";
+        nixvim = inputs.nixvim.homeModules.nixvim;
       in 
         nixpkgs.lib.nixosSystem {
           specialArgs = {
@@ -39,7 +40,7 @@
 
               home-manager = {
 
-                extraSpecialArgs = { inherit username; };
+                extraSpecialArgs = { inherit username; inherit nixvim; };
                 useGlobalPkgs = true;
                 useUserPackages = true;
 
