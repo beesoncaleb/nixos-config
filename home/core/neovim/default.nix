@@ -38,6 +38,12 @@
         action = "<cmd>Telescope find_files<CR>";
 	key = "<leader>ff";
       }
+
+      # Netrw bind
+      {
+        action = "<cmd>Ex<CR>";
+        key = "<leader>dr";
+      }
     ];
     
     colorschemes.onedark = {
@@ -51,6 +57,10 @@
       };
 
       telescope = {
+        enable = true;
+      };
+
+      web-devicons = {
         enable = true;
       };
 
