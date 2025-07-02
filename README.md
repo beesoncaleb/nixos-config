@@ -16,7 +16,6 @@ This is my Nixos config, I use Hyprland with Kitty for my windowmanager and term
 - Create universal host that can run from usb flash drive
 - Setup virtual machine software
 - Set up a sleeping or idle mechanism
-- Set up power management
 - Properly configure discord
 - Get a proper method for setting up development environments (Nix Shell or Devenv potentially)
 - Rice my shit
