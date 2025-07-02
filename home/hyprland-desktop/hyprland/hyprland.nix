@@ -18,6 +18,7 @@ $fileManager = dolphin
 $menu = wofi --show drun -G
 $browser = firefox
 $kill = shutdown now
+$screenshotdir = /home/beeso/screenshots
 
 #################
 ### AUTOSTART ###
@@ -209,17 +210,21 @@ device {
 $mainMod = ALT_R
 $shiftMod = SHIFT_R
 
-# Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
+# Main Binds
 bind = $mainMod, Q, exec, $terminal
 bind = $mainMod, C, killactive,
 bind = $mainMod, M, exit,
 bind = $mainMod, F, exec, $fileManager
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, $menu
-bind = $mainMod, P, pseudo, # dwindle
 bind = $mainMod, B, togglesplit, # dwindle
 bind = $mainMod, W, exec, $browser
 bind = $mainMod, Z, exec, $kill
+
+# Screenshot Binds
+bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
+bind = , PRINT, exec, hyprshot -m output -m eDP-1 -o $screenshotdir           # screenshot screen
+bind = $shiftMod, PRINT, exec, hyprshot -m region -o $screenshotdir           # screenshot selected area
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, H, movefocus, l

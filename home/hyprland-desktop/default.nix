@@ -7,8 +7,9 @@
   imports = [
     ./waybar
     ./hyprland
-    ./dunst.nix
     ./swww
+    ../modules/hyprshot.nix
+    ../modules/dunst.nix
   ];
 
   programs = {

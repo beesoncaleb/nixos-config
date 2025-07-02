@@ -20,6 +20,7 @@
     neofetch
     gh
     gcc
+    wl-clipboard
   ];
 
 }

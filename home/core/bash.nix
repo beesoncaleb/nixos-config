@@ -29,6 +29,7 @@ in {
     # fix to source environment variables in ~/.profile
     initExtra = ''
       [ -f ~/.profile ] && source ~/.profile
+      mkdir -p $HOME/screenshots
     '';
   };
 }
