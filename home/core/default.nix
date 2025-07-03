@@ -21,6 +21,7 @@
     gh
     gcc
     wl-clipboard
+    upower
   ];
 
 }
