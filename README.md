@@ -8,6 +8,7 @@ This is my Nixos config, I use Hyprland with Kitty for my windowmanager and term
 - Setup virtual machine software
 - Set up a sleeping or idle mechanism
 - Get a proper method for setting up development environments (Nix Shell or Devenv potentially)
+- Look it setting up ways to open new terminals in current location
 - Rice my shit
 
 ## Later fixes
