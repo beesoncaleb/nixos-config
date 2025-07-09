@@ -12,6 +12,9 @@ in
 
     # Temporary Configuration
     ../../home/misc/epics.nix   #for epics related packages and config, better to make this into a development environment when I can
+
+    # Alias to bash script for checking if new deadlines for ai class
+    ../../home/misc/ai-deadline.nix
   ];
 
   home = {
@@ -23,6 +26,14 @@ in
     enable = true;
     userName = "Caleb Beeson";
     userEmail = "caleb.f.beeson@gmail.com";
+  };
+
+  # Little configuration for VM using libvirtd and virt-manager
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
   };
 
   # Let Home Manager install and manage itself.

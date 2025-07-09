@@ -1,0 +1,16 @@
+{
+  config,
+  pkgs,
+  username,
+  ...
+}: {
+
+  users.users.${username}.extraGroups = [ "libvirtd" ];
+
+  programs.virt-manager.enable = true;
+  
+  virtualisation.libvirtd.enable = true;
+
+  virtualisation.spiceUSBRedirection.enable = true;
+
+}
