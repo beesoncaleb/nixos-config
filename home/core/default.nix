@@ -23,6 +23,7 @@
     gcc
     wl-clipboard
     upower
+    python313
   ];
 
 }
