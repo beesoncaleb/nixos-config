@@ -26,6 +26,8 @@
       expandtab = true;
       
       hlsearch = true;
+
+      scrolloff = 5;
     };
 
     keymaps = [
