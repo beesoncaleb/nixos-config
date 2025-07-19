@@ -27,9 +27,7 @@
     neofetch
     curl
     fuse
-
-    # Remove later
-    neovim
+    zip
   ];
 
   # Download nerd fonts

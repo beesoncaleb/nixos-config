@@ -62,6 +62,12 @@ env = HYPRCURSOR_SIZE,24
 ### LOOK AND FEEL ###
 #####################
 
+# Background paper through swww daemon
+exec-once = swww img ~/.nixos/home/hyprland-desktop/swww/cyberpunk_citysky.png --resize crop
+
+# Turn blur on for kitty
+windowrulev2 = opacity 0.85, class:^(kitty)$
+
 # https://wiki.hyprland.org/Configuring/Variables/#general
 general {
     gaps_in = 0

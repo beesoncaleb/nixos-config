@@ -24,6 +24,7 @@
     wl-clipboard
     upower
     python313
+    file
   ];
 
 }
