@@ -21,10 +21,12 @@
     neofetch
     gh
     gcc
+    gnumake
     wl-clipboard
     upower
     python313
     file
+    feh
   ];
 
 }

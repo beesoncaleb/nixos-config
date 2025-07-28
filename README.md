@@ -3,6 +3,7 @@
 This is my Nixos config, I use Hyprland with Kitty for my windowmanager and terminal emulator, with neovim for my code editor. If you have any cool suggestions for where to take my config feel free to email me at caleb.f.beeson@gmail.com.
 
 ## Future Endeavours
+- Refactor directory to make it more plug and play
 - Create host for my desktop
 - Create universal host that can run from usb flash drive
 - Setup virtual machine software
