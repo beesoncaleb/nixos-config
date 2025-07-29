@@ -22,6 +22,7 @@
     gh
     gcc
     gnumake
+    gdb
     wl-clipboard
     upower
     python313
