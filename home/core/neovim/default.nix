@@ -65,10 +65,6 @@
       web-devicons = {
         enable = true;
       };
-
-      #nvim-ufo = {
-      #  enable = true;
-      #};
     };
   };
 
