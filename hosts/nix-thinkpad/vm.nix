@@ -5,14 +5,19 @@
   ...
 }: {
 
-  users.users.${username}.extraGroups = [ "input" "kvm" ];
+  users.users.${username}.extraGroups = [ "libvirtd" "kvm" ];
 
-  environment.systemPackages = with pkgs; [
-    quickemu
-    swtpm
-    qemu_kvm
-    virt-viewer
-    spice-gtk
-    OVMF
-  ];
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      ovmf = {
+        enable = true;
+        packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+  };
+  virtualisation.spiceUSBRedirection.enable = true;
+
 }

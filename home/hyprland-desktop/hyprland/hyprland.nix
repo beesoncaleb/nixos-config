@@ -226,6 +226,7 @@ bind = $mainMod, R, exec, $menu
 bind = $mainMod, B, togglesplit, # dwindle
 bind = $mainMod, W, exec, $browser
 bind = $mainMod, Z, exec, $kill
+bind = $mainMod, F, fullscreen,
 
 # Screenshot Binds
 bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
