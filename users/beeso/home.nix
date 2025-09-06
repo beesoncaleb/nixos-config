@@ -24,8 +24,11 @@ in
 
   programs.git = {
     enable = true;
-    userName = "Caleb Beeson";
+    userName = "beesoncaleb";
     userEmail = "caleb.f.beeson@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   # Little configuration for VM using libvirtd and virt-manager
