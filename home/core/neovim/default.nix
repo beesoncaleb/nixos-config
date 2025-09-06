@@ -30,6 +30,25 @@
       scrolloff = 5;
     };
 
+    # Filetype specific options
+    files = {
+      "after/ftplugin/markdown.lua" = {
+        opts = {
+          wrap = true;
+        };
+        keymaps = [
+          {
+            action = "gj";
+            key = "j";
+          }
+          {
+            action = "gk";
+            key = "k";
+          }
+        ];
+      };
+    };
+
     keymaps = [
       # Telescope binds
       {
