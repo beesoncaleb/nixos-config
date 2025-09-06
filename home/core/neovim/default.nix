@@ -35,6 +35,7 @@
       "after/ftplugin/markdown.lua" = {
         opts = {
           wrap = true;
+          linebreak = true;
         };
         keymaps = [
           {
