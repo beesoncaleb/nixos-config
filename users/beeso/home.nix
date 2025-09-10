@@ -9,12 +9,10 @@ in
     ../../home/core
     ../../home/hyprland-desktop
     ../../home/misc/onedrive-service.nix
+    ../../home/modules/java.nix
 
     # Temporary Configuration
     ../../home/misc/epics.nix   #for epics related packages and config, better to make this into a development environment when I can
-
-    # Alias to bash script for checking if new deadlines for ai class
-    ../../home/misc/ai-deadline.nix
   ];
 
   home = {
