@@ -28,6 +28,7 @@
     curl
     fuse
     zip
+    pandoc
   ];
 
   # Download nerd fonts
