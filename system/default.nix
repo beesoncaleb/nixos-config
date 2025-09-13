@@ -29,6 +29,7 @@
     fuse
     zip
     pandoc
+    texlive.combined.scheme-full
   ];
 
   # Download nerd fonts
