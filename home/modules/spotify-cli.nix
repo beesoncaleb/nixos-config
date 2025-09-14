@@ -5,7 +5,7 @@
 }: {
 
   home.packages = with pkgs; [
-    spotify-player.nix
+    spotify-player
   ];
 
 }
