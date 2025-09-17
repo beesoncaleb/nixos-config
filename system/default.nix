@@ -81,6 +81,9 @@
   # enable hyprland for home-manager
   programs.hyprland.enable = true;
 
+  # default gui file manager
+  programs.thunar.enable = true;
+
   # xdg portals for hyprland support
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
