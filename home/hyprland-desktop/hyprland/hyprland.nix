@@ -14,7 +14,7 @@ monitor=,preferred,auto,auto
 
 # Set programs that you use
 $terminal = kitty
-$fileManager = dolphin
+$fileManager = thunar
 $menu = wofi --show drun -G
 $browser = firefox
 $kill = shutdown now
