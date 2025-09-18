@@ -17,6 +17,7 @@
 
   # System level packages
   environment.systemPackages = with pkgs; [
+    unzip
     wget
     vim
     tree
