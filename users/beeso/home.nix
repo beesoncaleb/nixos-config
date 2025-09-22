@@ -12,6 +12,8 @@ in
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
         ../../home/modules/spotify-cli.nix
+        ../../home/modules/poetry.nix
+
 
         ../../home/misc/onedrive-service.nix
 
