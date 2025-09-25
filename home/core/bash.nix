@@ -12,6 +12,13 @@ let
       la      = "ls -la";
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#nix-thinkpad";
       listgen = "nixos-rebuild list-generations";
+    
+      # fall2025 class aliases
+      auto    = "cd ~/school/fall25/automata";
+      net     = "cd ~/school/fall25/comp-networks";
+      proj    = "cd ~/school/fall25/comp-proj";
+      data    = "cd ~/school/fall25/databases";
+      ml      = "cd ~/school/fall25/machine-learning";
   };
 in {
 
