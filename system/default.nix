@@ -31,6 +31,7 @@
     zip
     pandoc
     texlive.combined.scheme-full
+    dig
   ];
 
   # Download nerd fonts
