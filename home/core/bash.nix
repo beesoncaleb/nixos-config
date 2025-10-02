@@ -16,7 +16,7 @@ let
       # fall2025 class aliases
       auto    = "cd ~/school/fall25/automata";
       net     = "cd ~/school/fall25/comp-networks";
-      proj    = "cd ~/school/fall25/comp-proj";
+      proj    = "cd ~/school/fall25/comp-proj/bluesky-disaster-mapper";
       data    = "cd ~/school/fall25/databases";
       ml      = "cd ~/school/fall25/machine-learning";
   };
