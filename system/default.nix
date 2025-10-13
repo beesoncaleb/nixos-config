@@ -15,6 +15,8 @@
   # Remove password from sudo command
   security.sudo.wheelNeedsPassword = false;
 
+  services.printing.enable = true;
+
   # System level packages
   environment.systemPackages = with pkgs; [
     unzip
