@@ -13,6 +13,7 @@ in
         ../../home/modules/thokr.nix
         ../../home/modules/spotify-cli.nix
         ../../home/modules/poetry.nix
+        ../../home/modules/yarn.nix
 
 
         ../../home/misc/onedrive-service.nix
