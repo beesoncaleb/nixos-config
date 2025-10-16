@@ -15,7 +15,16 @@
   # Remove password from sudo command
   security.sudo.wheelNeedsPassword = false;
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.hplip ];
+    browsing = true;
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+  };
 
   # System level packages
   environment.systemPackages = with pkgs; [
