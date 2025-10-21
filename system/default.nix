@@ -43,6 +43,7 @@
     pandoc
     texlive.combined.scheme-full
     dig
+    qbittorrent
   ];
 
   # Download nerd fonts
