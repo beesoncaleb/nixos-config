@@ -44,6 +44,7 @@
     texlive.combined.scheme-full
     dig
     qbittorrent
+    vlc
   ];
 
   # Download nerd fonts
