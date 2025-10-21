@@ -64,6 +64,12 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Enable Mullvad VPN
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn;
+  };
+
   # Time zone settings
   time.timeZone = "America/Chicago";
   i18n.defaultLocale = "en_US.UTF-8";
