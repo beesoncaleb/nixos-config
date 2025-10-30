@@ -45,6 +45,7 @@
     dig
     qbittorrent
     vlc
+    btop
   ];
 
   # Download nerd fonts
