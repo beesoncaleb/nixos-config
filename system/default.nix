@@ -46,6 +46,7 @@
     qbittorrent
     vlc
     btop
+    traceroute
   ];
 
   # Download nerd fonts
