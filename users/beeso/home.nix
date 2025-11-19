@@ -14,7 +14,6 @@ in
         ../../home/modules/spotify-cli.nix
         ../../home/modules/poetry.nix
         ../../home/modules/yarn.nix
-        ../../home/modules/docker.nix
 
 
         ../../home/misc/onedrive-service.nix
