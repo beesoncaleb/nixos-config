@@ -29,6 +29,8 @@
     python313Packages.pip
     file
     feh
+    dbeaver-bin
+    xournalpp
   ];
 
 }
