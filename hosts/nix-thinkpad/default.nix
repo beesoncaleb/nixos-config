@@ -9,6 +9,9 @@
       ../../system
     ];
 
+  # enable digimend for Huion tablet drivers
+  services.xserver.digimend.enable = true;
+
   programs.steam.enable = true;
 
   virtualisation.docker.enable = true;
