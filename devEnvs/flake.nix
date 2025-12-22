@@ -9,9 +9,23 @@
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
 
-    # common packages shared across development environments, none right now
-    universalPackages = [
-    ];
+    # Get all project shell directories autmatically
+    projectShells = let
+      dirs = builtins.attrNames (
+        pkgs.lib.filterAttrs (
+          name: type: 
+            type == "directory" && builtins.pathExists (./. + "/${name}/default.nix")
+        ) (builtins.readDir ./.)
+      );
+    in
+      builtins.listToAttrs (
+        map (
+          name: {
+            inherit name;
+            value = import (./. + "/${name}") { inherit pkgs; };
+          }
+        ) dirs
+      );
 
   in {
     
@@ -23,7 +37,7 @@
         packages = with pkgs; [
           pnpm
           nodejs_24
-        ] ++ universalPackages;
+        ];
 
         shellHook = ''
           echo 'Entered Node dev shell'
@@ -47,7 +61,7 @@
           gfortran        # provides libgfortran
           openblas        # BLAS/LAPACK for numpy
           zlib            # occasionally needed by wheels
-        ] ++ universalPackages;
+        ];
 
         shellHook = ''
           echo 'Entered Python dev shell'
@@ -67,7 +81,6 @@
           export PS1="\n\[\e[32m\][py-dev]\[\e[0m\] $PS1"
         '';
       };
-    };
+    } // projectShells;
   };
-
 }
