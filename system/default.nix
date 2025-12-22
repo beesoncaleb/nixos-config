@@ -2,6 +2,7 @@
   config,
   pkgs,
   username,
+  inputs,
   ...
 }: {
 
@@ -25,6 +26,13 @@
     enable = true;
     nssmdns4 = true;
   };
+
+  # Extra dependencies to save important shit from garbage collection
+  system.extraDependencies = let
+    all-shells = inputs.dev-shell.devShells."x86_64-linux";
+  in 
+    builtins.attrValues all-shells;
+
 
   # System level packages
   environment.systemPackages = with pkgs; [
