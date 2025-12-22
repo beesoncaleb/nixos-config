@@ -29,7 +29,7 @@
 
   # Extra dependencies to save important shit from garbage collection
   system.extraDependencies = let
-    all-shells = inputs.dev-shell.devShells."x86_64-linux";
+    all-shells = inputs.dev-shells.devShells."x86_64-linux";
   in 
     builtins.attrValues all-shells;
 
