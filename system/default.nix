@@ -36,6 +36,7 @@
 
   # System level packages
   environment.systemPackages = with pkgs; [
+    usbutils
     unzip
     wget
     vim
