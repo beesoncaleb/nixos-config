@@ -58,6 +58,11 @@
     traceroute
   ];
 
+  # Add a udev rule so that moomlander can be configured
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", MODE="0666", GROUP="users"
+  '';
+
   # Download nerd fonts
   fonts = {
     packages = with pkgs; [
