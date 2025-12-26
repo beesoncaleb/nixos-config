@@ -31,6 +31,7 @@
     feh
     dbeaver-bin
     xournalpp
+    keymapp
   ];
 
 }
