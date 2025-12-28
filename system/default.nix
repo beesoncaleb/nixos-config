@@ -58,10 +58,8 @@
     traceroute
   ];
 
-  # Add a udev rule so that moomlander can be configured
-  services.udev.extraRules = ''
-    KERNEL=="hidraw*", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", MODE="0666", GROUP="users"
-  '';
+  # Add this rule so that moonlander keyboard works fine
+  hardware.keyboard.zsa.enable = true;
 
   # Download nerd fonts
   fonts = {
