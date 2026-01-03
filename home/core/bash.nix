@@ -12,6 +12,8 @@ let
       la      = "ls -la";
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#nix-thinkpad";
       listgen = "nixos-rebuild list-generations";
+
+      proc    = "cd ~/work/UTDesign-Procurement";
   };
 in {
 
