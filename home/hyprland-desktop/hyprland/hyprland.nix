@@ -220,7 +220,6 @@ $shiftMod = SHIFT_R
 bind = $mainMod, Q, exec, $terminal
 bind = $mainMod, C, killactive,
 bind = $mainMod, M, exit,
-bind = $mainMod, F, exec, $fileManager
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, $menu
 bind = $mainMod, B, togglesplit, # dwindle
