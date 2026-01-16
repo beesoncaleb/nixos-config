@@ -14,6 +14,8 @@ let
       listgen = "nixos-rebuild list-generations";
 
       proc    = "cd ~/work/UTDesign-Procurement";
+      cars    = "cd ~/work/Carson-s-Village";
+      pwm     = "cd ~/work/Center-for-Children-and-Families-Attendance-Tracker";
   };
 in {
 
