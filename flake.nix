@@ -14,8 +14,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    dev-shells.url = "path:./devEnvs";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

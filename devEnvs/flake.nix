@@ -3,11 +3,13 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    oldPkgs.url = "github:nixos/nixpkgs/nixos-23.05";
   };
 
-  outputs = { self, nixpkgs, ... }: let
+  outputs = { self, nixpkgs, ... }@inputs: let
     system = "x86_64-linux";
     pkgs = import nixpkgs { inherit system; };
+    prisma-pkgs = import inputs.oldPkgs { inherit system; };
 
     # Get all project shell directories autmatically
     projectShells = let
@@ -22,7 +24,7 @@
         map (
           name: {
             inherit name;
-            value = import (./. + "/${name}") { inherit pkgs; };
+            value = import (./. + "/${name}") { inherit pkgs prisma-pkgs; };
           }
         ) dirs
       );
