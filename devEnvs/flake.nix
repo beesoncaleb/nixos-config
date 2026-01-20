@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     oldPkgs.url = "github:nixos/nixpkgs/nixos-23.05";
+    unstable.url = "github:nixos/nixpkgs/nixos-unstable"
   };
 
   outputs = { self, nixpkgs, ... }@inputs: let
@@ -24,7 +25,7 @@
         map (
           name: {
             inherit name;
-            value = import (./. + "/${name}") { inherit pkgs prisma-pkgs; };
+            value = import (./. + "/${name}") { inherit pkgs prisma-pkgs };
           }
         ) dirs
       );

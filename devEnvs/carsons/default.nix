@@ -1,4 +1,3 @@
-# This shell is pretty redundant but honestly I just wanted to try some new shell stuff that will be more useful for other projects
 { pkgs, prisma-pkgs, ... }: pkgs.mkShell {
   
   
