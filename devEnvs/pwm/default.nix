@@ -1,5 +1,5 @@
 # This shell is pretty redundant but honestly I just wanted to try some new shell stuff that will be more useful for other projects
-{ pkgs, unstable, ... }: pkgs.mkShell {
+{ pkgs, ... }: pkgs.mkShell {
     
   
   packages = [

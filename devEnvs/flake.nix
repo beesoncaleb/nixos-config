@@ -24,7 +24,7 @@
         map (
           name: {
             inherit name;
-            value = import (./. + "/${name}") { inherit pkgs prisma-pkgs };
+            value = import (./. + "/${name}") { inherit pkgs prisma-pkgs; };
           }
         ) dirs
       );
