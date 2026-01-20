@@ -37,19 +37,28 @@ in {
 
       # Function for initiating basic development environments
       ndev() {
-        local FLAKE_PATH="$HOME/.nixos/devEnvs"
+        local DEV_PATH="$HOME/.nixos/devEnvs/"
         
         # If no argument is provided, list available environments
         if [ -z "$1" ]; then
           echo "Usage: ndev <environment>"
           echo "Available environments:"
-          nix flake show "$FLAKE_PATH" --json 2>/dev/null | jq -r '.devShells."x86_64-linux" | keys[]' | sed 's/^/  - /'
+          ls -d1 "''${DEV_PATH}"*/ 2>/dev/null | sed "s|^''${DEV_PATH}|    |" | sed "s|/$||"
           return 1
         fi
 
-        # Enter the specific development shell
-        # We use --command bash to ensure we don't nest shells infinitely
-        nix develop "$FLAKE_PATH#$1"
+        # Enter the specific development shell and use profile if it exists
+        local PROFILE="''${DEV_PATH}''${1}/profile" 
+
+        if [[ -L "$PROFILE" && -e "$PROFILE" ]]; then
+          echo "Using cached environment"
+          nix develop "$PROFILE"
+        else
+          echo "No cached environment, installing dependencies"
+          nix develop --profile "$PROFILE" "''${DEV_PATH}''${1}"
+        fi
+          
+        return 1
       }
     '';
   };
