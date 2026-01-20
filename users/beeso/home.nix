@@ -1,25 +1,17 @@
-{ config, pkgs, username, ... }:
-
-let
-  mountPoint = "${config.home.homeDirectory}/utd";
-in
-{
-
+{ 
+  config, 
+  pkgs, 
+  username, 
+  ... 
+}: {
   imports = [
+        # Fix this later, you just moved the simple installation lines to files and it's dumb
         ../../home/core
         ../../home/hyprland-desktop
 
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
         ../../home/modules/spotify-cli.nix
-        ../../home/modules/poetry.nix
-        ../../home/modules/yarn.nix
-
-
-        ../../home/misc/onedrive-service.nix
-
-        # Temporary Configuration
-        ../../home/misc/epics.nix             # turn this into a dev environment eventually
   ];
 
   home = {
@@ -29,9 +21,10 @@ in
 
   programs.git = {
     enable = true;
-    userName = "beesoncaleb";
-    userEmail = "caleb.f.beeson@gmail.com";
-    extraConfig = {
+
+    settings = {
+      user.name = "beesoncaleb";
+      user.email = "caleb.f.beeson@gmail.com";
       init.defaultBranch = "main";
       url."git@github.com:".insteadOf = "https://github.com/";
     };

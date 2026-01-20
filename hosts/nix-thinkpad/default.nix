@@ -1,8 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
+  imports = [
       ./hardware-configuration.nix
       ./powerManagement.nix
       ./vm.nix
@@ -12,7 +11,8 @@
   # enable digimend for Huion tablet drivers
   services.xserver.digimend.enable = true;
 
-  programs.steam.enable = true;
+  # Define hostname
+  networking.hostName = "nix-thinkpad";
 
   virtualisation.docker.enable = true;
 

@@ -8,7 +8,6 @@
     ./bash.nix
     ./office-suite
     ./neovim
-    ../modules/obsidian.nix
   ];
 
   programs = {

@@ -27,13 +27,6 @@
     nssmdns4 = true;
   };
 
-  # Extra dependencies to save important shit from garbage collection
-  system.extraDependencies = let
-    all-shells = inputs.dev-shells.devShells."x86_64-linux";
-  in 
-    builtins.attrValues all-shells;
-
-
   # System level packages
   environment.systemPackages = with pkgs; [
     usbutils
@@ -70,9 +63,6 @@
       nerd-fonts.iosevka
     ];
   };
-
-  # Define hostname
-  networking.hostName = "nix-thinkpad";
 
   # Enable network manager
   networking.networkmanager.enable = true;
