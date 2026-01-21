@@ -18,7 +18,7 @@
       packages = [
         pkgs.pnpm
         pkgs.nodejs_24
-        prisma-pkgs.prisma-engines_7;
+        prisma-pkgs.prisma-engines_7
       ];
 
       shellHook = ''
