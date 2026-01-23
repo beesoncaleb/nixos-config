@@ -19,6 +19,7 @@
         pkgs.pnpm
         pkgs.nodejs_24
         pkgs.ollama
+        pkgs.python313Packages.chromadb
         prisma-pkgs.prisma-engines_6
       ];
 
