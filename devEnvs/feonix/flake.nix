@@ -18,6 +18,7 @@
       packages = [
         pkgs.pnpm
         pkgs.nodejs_24
+        pkgs.ollama
         prisma-pkgs.prisma-engines_6
       ];
 
