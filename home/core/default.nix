@@ -24,8 +24,6 @@
     gdb
     wl-clipboard
     upower
-    python313
-    python313Packages.pip
     file
     feh
     dbeaver-bin
