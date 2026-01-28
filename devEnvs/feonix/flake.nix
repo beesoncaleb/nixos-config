@@ -20,6 +20,7 @@
         pkgs.nodejs_24
         pkgs.ollama
         pkgs.python313Packages.chromadb
+        pkgs.python313Packages.python-dotenv
         prisma-pkgs.prisma-engines_6
       ];
 
