@@ -34,11 +34,10 @@
     ];
 
 
-    plugins = {
-      toggleterm = {
-        enable = true;
-      };
+    plugins.toggleterm = {
+      enable = true;
     };
+
   };
 
 }
