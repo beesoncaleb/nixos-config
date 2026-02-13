@@ -30,6 +30,8 @@
           "<leader>tw"  = "actions.tcd";
           "<leader>s"   = "actions.change_sort";
           "<leader>."   = "actions.toggle_hidden";
+
+          "<leader>q"   = "actions.open_terminal";
         };
 
       };
