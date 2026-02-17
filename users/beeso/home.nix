@@ -6,28 +6,51 @@
 }: {
   imports = [
         # Fix this later, you just moved the simple installation lines to files and it's dumb
-        ../../home/core
         ../../home/hyprland-desktop
+        ../../home/neovim
 
+        ../../home/modules/bash.nix
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
-        ../../home/modules/spotify-cli.nix
   ];
 
   home = {
     inherit username;
     homeDirectory = "/home/${username}";
+
+    packages = with pkgs; [
+      discord
+      neofetch
+      gh
+      gcc
+      gnumake
+      gdb
+      wl-clipboard
+      upower
+      file
+      feh
+      dbeaver-bin
+      xournalpp
+      keymapp
+      opencode
+    ];
   };
 
-  programs.git = {
-    enable = true;
+  programs = {
+    firefox.enable = true;
+    google-chrome.enable = true;
 
-    settings = {
-      user.name = "beesoncaleb";
-      user.email = "caleb.f.beeson@gmail.com";
-      init.defaultBranch = "main";
-      url."git@github.com:".insteadOf = "https://github.com/";
+    git = {
+      enable = true;
+
+      settings = {
+        user.name = "beesoncaleb";
+        user.email = "caleb.f.beeson@gmail.com";
+        init.defaultBranch = "main";
+        url."git@github.com:".insteadOf = "https://github.com/";
+      };
     };
+
   };
 
   # Little configuration for VM using libvirtd and virt-manager
