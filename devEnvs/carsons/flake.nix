@@ -18,6 +18,7 @@
       packages = [
         pkgs.pnpm
         pkgs.nodejs_24
+        pkgs.auth0-cli
         prisma-pkgs.prisma-engines
       ];
 
