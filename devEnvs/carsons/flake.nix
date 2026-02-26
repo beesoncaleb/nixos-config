@@ -19,6 +19,7 @@
         pkgs.pnpm
         pkgs.nodejs_24
         pkgs.auth0-cli
+        pkgs.awscli2
         prisma-pkgs.prisma-engines
       ];
 
