@@ -40,6 +40,8 @@
     firefox.enable = true;
     google-chrome.enable = true;
 
+    vscode.enable = true;
+
     git = {
       enable = true;
 
