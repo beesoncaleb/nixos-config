@@ -4,7 +4,6 @@
   imports = [
       ./hardware-configuration.nix
       ./powerManagement.nix
-      ./vm.nix
       ../../system
     ];
 
