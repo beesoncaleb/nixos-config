@@ -91,18 +91,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Set GDM as display manager
-  services.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
-
-  # Configure keymap in X11, necessary for GDM (LOOK INTO DIFFERENT DISPLAY MANAGER LATER)
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
   # enable hyprland for home-manager
   programs.hyprland.enable = true;
 

@@ -41,7 +41,6 @@
     google-chrome.enable = true;
     vscode.enable = true;
 
-    //REMOVE
     obs-studio.enable = true;
 
     git = {

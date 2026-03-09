@@ -16,6 +16,18 @@
 
   virtualisation.docker.enable = true;
 
+  # Set GDM as display manager
+  services.displayManager.gdm = {
+    enable = true;
+    wayland = true;
+  };
+
+  # Configure keymap in X11, necessary for GDM (LOOK INTO DIFFERENT DISPLAY MANAGER LATER)
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
