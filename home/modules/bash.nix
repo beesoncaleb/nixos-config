@@ -37,12 +37,12 @@ in {
       mkdir -p $HOME/screenshots
 
       # Function for initiating basic development environments
-      ndev() {
+      dev() {
         local DEV_PATH="$HOME/.nixos/devEnvs/"
         
         # If no argument is provided, list available environments
         if [ -z "$1" ]; then
-          echo "Usage: ndev <environment>"
+          echo "Usage: dev <environment>"
           echo "Available environments:"
           ls -d1 "''${DEV_PATH}"*/ 2>/dev/null | sed "s|^''${DEV_PATH}|    |" | sed "s|/$||"
           return 1
