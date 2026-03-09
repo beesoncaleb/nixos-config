@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  host,
   ...
 }: 
 let
@@ -10,7 +11,7 @@ let
       dr      = "tree -L";
       dra     = "tree -La";
       la      = "ls -la";
-      rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#nix-thinkpad";
+      rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#${host}";
       listgen = "nixos-rebuild list-generations";
 
       proc    = "cd ~/work/UTDesign-Procurement";

@@ -39,7 +39,7 @@
 
             home-manager = {
 
-              extraSpecialArgs = { inherit username; inherit nixvim; };
+              extraSpecialArgs = { inherit username; inherit nixvim; host="nix-thinkpad"; };
               useGlobalPkgs = true;
               useUserPackages = true;
 
