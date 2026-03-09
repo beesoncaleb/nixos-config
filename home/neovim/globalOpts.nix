@@ -20,6 +20,9 @@
       hlsearch = true;
 
       scrolloff = 5;
+
+      foldlevel = 99;
+      foldlevelstart = 99;
     };
   };
 

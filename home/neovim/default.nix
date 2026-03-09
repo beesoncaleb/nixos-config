@@ -14,6 +14,7 @@
     ./plugins/telescope.nix
     ./plugins/toggleterm.nix
     ./plugins/oil.nix
+    ./plugins/treesitter.nix
   ];
 
   programs.nixvim = {
@@ -26,7 +27,6 @@
 
     # Simple Plugins with no config
     plugins = {
-      treesitter.enable = true;
       web-devicons.enable = true;
     };
 
