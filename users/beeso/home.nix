@@ -33,6 +33,7 @@
       xournalpp
       keymapp
       opencode
+      bat
     ];
   };
 
