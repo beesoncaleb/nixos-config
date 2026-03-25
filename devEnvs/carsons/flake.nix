@@ -21,6 +21,7 @@
         pkgs.auth0-cli
         pkgs.awscli2
         pkgs.stripe-cli
+        pkgs.cloudflared
         prisma-pkgs.prisma-engines
       ];
 
