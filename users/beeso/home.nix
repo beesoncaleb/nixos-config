@@ -34,6 +34,7 @@
       keymapp
       opencode
       bat
+      spotify
     ];
   };
 
