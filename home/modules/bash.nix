@@ -14,6 +14,8 @@ let
       rebuild = "sudo nixos-rebuild switch --flake ~/.nixos#${host}";
       listgen = "nixos-rebuild list-generations";
 
+      # Project aliases
+      chess   = "cd ~/proj/chess-webapp";
       proc    = "cd ~/work/UTDesign-Procurement";
       cars    = "cd ~/work/Carson-s-Village";
       pwm     = "cd ~/work/Center-for-Children-and-Families-Attendance-Tracker";
