@@ -35,6 +35,7 @@
       opencode
       bat
       spotify
+      cloc
     ];
   };
 
