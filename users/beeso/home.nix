@@ -36,6 +36,7 @@
       bat
       spotify
       cloc
+      opentofu
     ];
   };
 
