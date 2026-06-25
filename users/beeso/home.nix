@@ -36,6 +36,7 @@
       spotify
       cloc
       nmap
+      opentofu
     ];
   };
 
