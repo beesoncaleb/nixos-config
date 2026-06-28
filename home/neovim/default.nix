@@ -2,6 +2,7 @@
   config,
   pkgs,
   nixvim,
+  inputs,
   ...
 }: {
 
@@ -18,6 +19,9 @@
   ];
 
   programs.nixvim = {
+    # Do this to ensure that nixvim follows nixpkgs and suppresses warnings
+    nixpkgs.source = inputs.nixpkgs;
+
     enable = true;
     defaultEditor = true;
     

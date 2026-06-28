@@ -38,7 +38,6 @@
     openssl
     ripgrep
     git
-    neofetch
     curl
     fuse
     zip

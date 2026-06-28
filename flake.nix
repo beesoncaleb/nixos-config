@@ -3,15 +3,15 @@
   description = "My system config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/nixos-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -39,7 +39,7 @@
 
             home-manager = {
 
-              extraSpecialArgs = { inherit username; inherit nixvim; host="nix-thinkpad"; };
+              extraSpecialArgs = { inherit username; inherit inputs; inherit nixvim; host="nix-thinkpad"; };
               useGlobalPkgs = true;
               useUserPackages = true;
 

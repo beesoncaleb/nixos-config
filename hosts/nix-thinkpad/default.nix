@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, username, ... }:
 
 {
   imports = [
@@ -15,16 +15,28 @@
 
   virtualisation.docker.enable = true;
 
-  # Set GDM as display manager
-  services.displayManager.gdm = {
-    enable = true;
-    wayland = true;
-  };
+  # Use Ly as display manager
+  services.displayManager.ly.enable = true;
 
   # Configure keymap in X11, necessary for GDM (LOOK INTO DIFFERENT DISPLAY MANAGER LATER)
   services.xserver.xkb = {
     layout = "us";
     variant = "";
+  };
+
+  # TODO: Fix this, currently broken can get to ly display manager, but after login immediately logs out
+  # Configure build-vm virtualisation for testing of new builds
+  virtualisation.vmVariant = {
+    users.users.${username} = {
+      isNormalUser = true;
+      password = "password";
+      extraGroups = [ "wheel" ];
+    };
+
+    virtualisation = {
+      memorySize = 16384;
+      cores = 8;
+    };
   };
 
   # Bootloader.

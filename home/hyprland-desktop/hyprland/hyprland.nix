@@ -65,9 +65,6 @@ env = HYPRCURSOR_SIZE,24
 # Background paper through swww daemon
 exec-once = swww img ~/.nixos/home/hyprland-desktop/swww/cyberpunk_citysky.png --resize crop
 
-# Turn blur on for kitty
-windowrulev2 = opacity 0.85, class:^(kitty)$
-
 # https://wiki.hyprland.org/Configuring/Variables/#general
 general {
     gaps_in = 0
@@ -158,7 +155,6 @@ animations {
 
 # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
 dwindle {
-    pseudotile = true # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybindss section below
     preserve_split = true # You probably want this
 }
 
@@ -217,15 +213,14 @@ bind = $mainMod, C, killactive,
 bind = $mainMod, M, exit,
 bind = $mainMod, V, togglefloating,
 bind = $mainMod, R, exec, $menu
-bind = $mainMod, B, togglesplit, # dwindle
 bind = $mainMod, W, exec, $browser
 bind = $mainMod, Z, exec, $kill
 bind = $mainMod, F, fullscreen,
 
 # Screenshot Binds
-bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
-bind = , PRINT, exec, hyprshot -m output -m eDP-1 -o $screenshotdir           # screenshot screen
-bind = $shiftMod, PRINT, exec, hyprshot -m region -o $screenshotdir           # screenshot selected area
+# bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
+# bind = , PRINT, exec, hyprshot -m output -m eDP-1 -o $screenshotdir           # screenshot screen
+# bind = $shiftMod, PRINT, exec, hyprshot -m region -o $screenshotdir           # screenshot selected area
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, H, movefocus, l

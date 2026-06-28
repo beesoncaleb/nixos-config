@@ -19,6 +19,9 @@ in {
     package = null;
     portalPackage = null;
     extraConfig = hyprlandConfig;
+
+    # TODO: Migrate hyprland config to Lua or switch to Niri, use Hyprland legacy config for now
+    configType = "hyprlang";
   };
 
 }

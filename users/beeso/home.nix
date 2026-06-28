@@ -20,7 +20,6 @@
 
     packages = with pkgs; [
       discord
-      neofetch
       gh
       gcc
       gnumake
@@ -40,9 +39,12 @@
   };
 
   programs = {
-    firefox.enable = true;
+    firefox = {
+      enable = true;
+      configPath = "${config.xdg.configHome}/mozilla/firefox";
+    };
+
     google-chrome.enable = true;
-    vscode.enable = true;
 
     obs-studio.enable = true;
 
