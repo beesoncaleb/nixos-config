@@ -4,15 +4,11 @@ This is my Nixos config, I use Hyprland with Kitty for my windowmanager and term
 
 ## Future Endeavours
 - Refactor directory to make it more plug and play
-- Create host for my desktop
 - Create universal host that can run from usb flash drive
 - Setup virtual machine software
 - Set up a sleeping or idle mechanism
-- Look it setting up ways to open new terminals in current location
 - Rice my shit
 
 ## Later fixes
 - Go fix your shitty mess for hyprshot and modularize it more
 - Honestly I'll probably majorly redo my current directory structure and move everything into modules for the most part
-
-Adding this change to test webhooks
