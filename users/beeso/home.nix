@@ -35,6 +35,7 @@
       bat
       spotify
       cloc
+      nmap
     ];
   };
 
