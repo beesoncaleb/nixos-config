@@ -42,7 +42,7 @@
     fuse
     zip
     pandoc
-    texlive.combined.scheme-full
+    texliveFull
     dig
     qbittorrent
     vlc
@@ -55,7 +55,10 @@
 
   # Download nerd fonts
   fonts = {
+    fontDir.enable = true;
     packages = with pkgs; [
+      corefonts
+      tex-gyre.heros      
       nerd-fonts.symbols-only # symbols icon only
       nerd-fonts.fira-code
       nerd-fonts.jetbrains-mono
@@ -63,11 +66,11 @@
     ];
   };
 
-  # Enable network manager
-  networking.networkmanager.enable = true;
+    # Enable network manager
+    networking.networkmanager.enable = true;
 
-  # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+    # Enable flakes
+    nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable Mullvad VPN
   services.mullvad-vpn = {
