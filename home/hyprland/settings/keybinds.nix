@@ -14,7 +14,7 @@
     {
       _args = [
         "${modKey} + Q"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(${terminal})")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${terminal}")'')
       ];
     }
 
@@ -22,7 +22,7 @@
     {
       _args = [
         "${modKey} + W"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(${browser})")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${browser}")'')
       ];
     }
 
@@ -30,7 +30,7 @@
     {
       _args = [
         "${modKey} + R"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(${menu})")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("${menu}")'')
       ];
     }
 
@@ -38,7 +38,7 @@
     {
       _args = [
         "${modKey} + Z"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(shutdown now)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("shutdown now")'')
       ];
     }
 
@@ -50,7 +50,7 @@
     {
       _args = [
         "${modKey} + PRINT"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(hyprshot -m window -m active)")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("hyprshot -m window -m active")'')
       ];
     }
 
@@ -58,15 +58,15 @@
     {
       _args = [
         "PRINT"
-        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd(hyprshot -m output --output $(hyprctl activewindow -j | jq -r '.monitor'))'')
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("hyprshot -m output --output $(hyprctl activewindow -j | jq -r '.monitor')")'')
       ];
     }
 
     # Screenshot Selected Section
     {
       _args = [
-        "SHIFT_R + PRINT"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(hyprshot -m region)")
+        "SHIFT + PRINT"
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("hyprshot -m region")'')
       ];
     }
 
@@ -79,7 +79,7 @@
       {
         _args = [
           "${modKey} + ${dir.key}"
-          (lib.generators.mkLuaInline "hl.dsp.focus({ direction = \"${dir.move}\" }))")
+          (lib.generators.mkLuaInline ''hl.dsp.focus({ direction = "${dir.move}" })'')
         ];
       }
     ) [
@@ -97,7 +97,7 @@
           num = builtins.toString (lib.mod (key + 1) 10);
         in [
           "${modKey} + ${num}"
-          (lib.generators.mkLuaInline "hl.dsp.focus({ workspace = ${workspace} }))")
+          (lib.generators.mkLuaInline "hl.dsp.focus({ workspace = ${workspace} })")
         ];
       }
     ) 10)
@@ -109,8 +109,8 @@
           workspace = builtins.toString (key + 1);
           num = builtins.toString (lib.mod (key+1) 10);
         in [
-          "${modKey} + SHIFT + ${num}"
-          (lib.generators.mkLuaInline "hl.dsp.window.move({ workspace = ${workspace} }))")
+          "SHIFT + ${modKey} + ${num}"
+          (lib.generators.mkLuaInline "hl.dsp.window.move({ workspace = ${workspace} })")
         ];
       }
     ) 10)
@@ -119,8 +119,8 @@
     (map (dir:
       {
         _args = [
-          "${modKey} + SHIFT + ${dir.key}"
-          (lib.generators.mkLuaInline "hl.dsp.window.move({ direction = \"${dir.move}\" }))")
+          "SHIFT + ${modKey} + ${dir.key}"
+          (lib.generators.mkLuaInline ''hl.dsp.window.move({ direction = "${dir.move}" })'')
         ];
       }
     ) [
@@ -154,7 +154,7 @@
     {
       _args = [
         "XF86AudioRaiseVolume"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+")'')
         { locked = true; repeating = true; }
       ];
     }
@@ -163,7 +163,7 @@
     {
       _args = [
         "XF86AudioLowerVolume"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-")'')
         { locked = true; repeating = true; }
       ];
     }
@@ -172,7 +172,7 @@
     {
       _args = [
         "XF86AudioMute"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle")'')
         { locked = true; repeating = true; }
       ];
     }
@@ -181,7 +181,7 @@
     {
       _args = [
         "XF86AudioMicMute"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle")'')
         { locked = true; repeating = true; }
       ];
     }
@@ -190,7 +190,7 @@
     {
       _args = [
         "XF86AudioNext"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"playerctl next\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl next")'')
         { locked = true; }
       ];
     }
@@ -199,7 +199,7 @@
     {
       _args = [
         "XF86AudioPrev"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"playerctl previous\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl previous")'')
         { locked = true; }
       ];
     }
@@ -208,7 +208,7 @@
     {
       _args = [
         "XF86AudioPlay"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"playerctl play\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl play")'')
         { locked = true; }
       ];
     }
@@ -217,7 +217,7 @@
     {
       _args = [
         "XF86AudioPause"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"playerctl pause\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("playerctl pause")'')
         { locked = true; }
       ];
     }
@@ -230,7 +230,7 @@
     {
       _args = [
         "XF86MonBrightnessUp"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl -e4 -n2 set 5%+\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+")'')
         { locked = true; repeating = true; }
       ];
     }
@@ -239,7 +239,7 @@
     {
       _args = [
         "XF86MonBrightnessDown"
-        (lib.generators.mkLuaInline "hl.dsp.exec_cmd(\"brightnessctl -e4 -n2 set 5%-\")")
+        (lib.generators.mkLuaInline ''hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-")'')
         { locked = true; repeating = true; }
       ];
     }

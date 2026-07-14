@@ -36,7 +36,7 @@ in lib.recursiveUpdate {
   window_rule = {
     name = "suppress-maximize-events";
     match = { class = ".*"; };
-    supress_event = "maximize";
+    suppress_event = "maximize";
   };
 
   # TODO: Make hyprland config more plug and play

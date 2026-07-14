@@ -8,7 +8,6 @@
       resize_on_border = false;
       allow_tearing    = false;
       layout           = "dwindle";
-      dwindle.preserve_split = true;
 
       col = {
         active_border = { 
@@ -24,19 +23,20 @@
 
     };
 
+    dwindle.preserve_split = true;
+
     decoration = {
 
       rounding           = 5;
       rounding_power     = 2;
       active_opacity     = 1.0;
       inactive_opacity   = 1.0;
-      animations.enabled = true;
 
       shadow = {
         enabled      = true;
         range        = 4;
         render_power = 3;
-        color        = "rgb(1a1a1aee)";
+        color        = "0xee1a1a1a";
       };
 
       blur = {
@@ -47,5 +47,7 @@
       };
 
     };
+
+    animations.enabled = true;
   };
 }
