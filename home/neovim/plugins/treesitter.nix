@@ -7,13 +7,6 @@
 
   programs.nixvim = {
     keymaps = [
-      # Keeps entering normal mode consistent in terminal mode
-      #{
-      #  mode = "t";
-      #  key = "<Esc>";
-      #  action = ''<C-\><C-n>'';    # use multiline so that '\' isn't interpolated
-      #}
-
       # Toggle folds at cursor
       {
         mode = "n";

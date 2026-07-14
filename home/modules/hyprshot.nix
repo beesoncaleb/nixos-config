@@ -5,10 +5,14 @@
 }: {
 
   home.packages = with pkgs; [
-    hyprshot
     grim
     slurp
     libnotify
     jq
   ];
+
+  programs.hyprshot = {
+    enable = true;
+    saveLocation = "$HOME/screenshots";
+  };
 }

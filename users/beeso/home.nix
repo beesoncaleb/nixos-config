@@ -6,7 +6,7 @@
 }: {
   imports = [
         # Fix this later, you just moved the simple installation lines to files and it's dumb
-        ../../home/hyprland-desktop
+        ../../home/hyprland
         ../../home/neovim
 
         ../../home/modules/bash.nix
