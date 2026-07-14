@@ -66,11 +66,11 @@
     ];
   };
 
-    # Enable network manager
-    networking.networkmanager.enable = true;
+  # Enable network manager
+  networking.networkmanager.enable = true;
 
-    # Enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Enable Mullvad VPN
   services.mullvad-vpn = {

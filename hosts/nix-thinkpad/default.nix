@@ -24,8 +24,6 @@
     variant = "";
   };
 
-  # TODO: Fix this, currently broken can get to ly display manager, but after login immediately logs out
-  # Configure build-vm virtualisation for testing of new builds
   virtualisation.vmVariant = {
     users.users.${username} = {
       isNormalUser = true;
