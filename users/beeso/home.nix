@@ -37,6 +37,7 @@
       cloc
       nmap
       opentofu
+      awscli2
     ];
   };
 
