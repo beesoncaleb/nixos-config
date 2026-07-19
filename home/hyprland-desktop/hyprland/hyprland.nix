@@ -218,9 +218,9 @@ bind = $mainMod, Z, exec, $kill
 bind = $mainMod, F, fullscreen,
 
 # Screenshot Binds
-# bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
-# bind = , PRINT, exec, hyprshot -m output -m eDP-1 -o $screenshotdir           # screenshot screen
-# bind = $shiftMod, PRINT, exec, hyprshot -m region -o $screenshotdir           # screenshot selected area
+bind = $mainMod, PRINT, exec, hyprshot -m window -m active -o $screenshotdir  # screenshot window
+bind = , PRINT, exec, hyprshot -m output -m eDP-1 -o $screenshotdir           # screenshot screen
+bind = $shiftMod, PRINT, exec, hyprshot -m region -o $screenshotdir           # screenshot selected area
 
 # Move focus with mainMod + arrow keys
 bind = $mainMod, H, movefocus, l
