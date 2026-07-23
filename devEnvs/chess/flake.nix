@@ -1,7 +1,7 @@
 {
   description = "Development shell for my chess web app";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
 
   outputs = { self, nixpkgs, ... }: let 
 
@@ -13,7 +13,7 @@
       
       packages = [
         pkgs.pnpm
-        pkgs.nodejs_24
+        pkgs.nodejs_26
         pkgs.prisma-engines_7
       ];
 
