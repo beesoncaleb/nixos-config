@@ -2,7 +2,7 @@
   description = "Development shell for Carson's Village EPICS project";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
   };
 
   outputs = { self, nixpkgs, ... }: let 
@@ -13,13 +13,13 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       
-      packages = [
-        pkgs.pnpm
-        pkgs.nodejs_24
-        pkgs.awscli2
-        pkgs.stripe-cli
-        pkgs.cloudflared
-        pkgs.prisma-engines_7
+      packages = with pkgs; [
+        pnpm
+        nodejs_26
+        awscli2
+        stripe-cli
+        cloudflared
+        prisma-engines_7
       ];
 
       shellHook = ''
