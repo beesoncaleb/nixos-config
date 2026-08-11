@@ -12,6 +12,7 @@
         ../../home/modules/bash.nix
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
+        ../../home/modules/delta.nix
   ];
 
   home = {
