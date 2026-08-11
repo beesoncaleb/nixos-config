@@ -13,6 +13,7 @@
       side-by-side = true;
       hyperlinks = true;
       navigate = true;
+      wrap-max-lines = 3;
     };
   };
 }
