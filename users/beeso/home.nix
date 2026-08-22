@@ -52,6 +52,8 @@
 
     obs-studio.enable = true;
 
+    obsidian.enable = true;
+
     git = {
       enable = true;
 
