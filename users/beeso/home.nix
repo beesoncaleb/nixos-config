@@ -13,6 +13,7 @@
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
         ../../home/modules/delta.nix
+        ../../home/modules/obsidian.nix
   ];
 
   home = {
@@ -51,8 +52,6 @@
     google-chrome.enable = true;
 
     obs-studio.enable = true;
-
-    obsidian.enable = true;
 
     git = {
       enable = true;
