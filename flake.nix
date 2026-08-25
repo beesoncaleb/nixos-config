@@ -14,9 +14,14 @@
       url = "github:nix-community/nixvim/nixos-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, agenix, ... }@inputs:
   {
     nixosConfigurations = {
 
@@ -42,6 +47,7 @@
               extraSpecialArgs = { inherit username; inherit inputs; inherit nixvim; host="nix-thinkpad"; };
               useGlobalPkgs = true;
               useUserPackages = true;
+              sharedModules = [ agenix.homeManagerModules.default ];
 
               users.${username} = import ./users/${username}/home.nix;
             };
