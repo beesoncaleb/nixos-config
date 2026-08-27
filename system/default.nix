@@ -69,6 +69,12 @@
   # Enable network manager
   networking.networkmanager.enable = true;
 
+  # Enable ssh daemon
+  services.openssh.enable = true;
+
+  # Enable fuse to be used by home-manager modules
+  programs.fuse.userAllowOther = true;
+
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
