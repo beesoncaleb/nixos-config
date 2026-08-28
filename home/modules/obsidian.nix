@@ -7,6 +7,19 @@
   programs.obsidian = {
     enable = true;
 
-    # Will add more config later when I figure things out
-  };
+    # Declare vault so that settings apply
+    vaults.notes = {
+      target = "drive/notes";
+    };
+
+    defaultSettings = {
+        app = {
+          vimMode = true;
+        };
+        
+        appearance = {
+          theme = "obsidian";
+        };
+      };
+    };
 }
