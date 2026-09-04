@@ -1,7 +1,8 @@
 { 
   config, 
   pkgs, 
-  username, 
+  username,
+  agenix,
   ... 
 }: {
   imports = [
@@ -41,6 +42,9 @@
       nmap
       opentofu
       awscli2
+
+      # Install agenix cli
+      agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
   };
 

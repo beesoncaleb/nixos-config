@@ -44,7 +44,7 @@
 
             home-manager = {
 
-              extraSpecialArgs = { inherit username; inherit inputs; inherit nixvim; host="nix-thinkpad"; };
+              extraSpecialArgs = { inherit username; inherit inputs; inherit nixvim; inherit agenix; host="nix-thinkpad"; };
               useGlobalPkgs = true;
               useUserPackages = true;
               sharedModules = [ agenix.homeManagerModules.default ];
