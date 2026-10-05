@@ -14,7 +14,6 @@
         ../../home/modules/java.nix
         ../../home/modules/thokr.nix
         ../../home/modules/delta.nix
-        ../../home/modules/obsidian.nix
         ../../home/modules/gdrive.nix
   ];
 
@@ -43,6 +42,7 @@
       opentofu
       awscli2
       ticktick
+      obsidian
 
       # Install agenix cli
       agenix.packages.${pkgs.stdenv.hostPlatform.system}.default

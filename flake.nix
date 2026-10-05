@@ -48,6 +48,7 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               sharedModules = [ agenix.homeManagerModules.default ];
+              backupFileExtension = "backup";
 
               users.${username} = import ./users/${username}/home.nix;
             };
