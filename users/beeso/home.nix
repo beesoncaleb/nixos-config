@@ -42,6 +42,7 @@
       nmap
       opentofu
       awscli2
+      ticktick
 
       # Install agenix cli
       agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
