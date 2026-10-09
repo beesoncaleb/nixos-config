@@ -2,7 +2,7 @@
   description = "General purpose Node dev shell";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
   };
 
   outputs = { self, nixpkgs, ... }: let 
@@ -15,7 +15,7 @@
       
       packages = [
         pkgs.pnpm
-        pkgs.nodejs_24
+        pkgs.nodejs_26
       ];
 
       shellHook = ''
