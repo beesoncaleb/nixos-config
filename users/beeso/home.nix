@@ -15,6 +15,7 @@
         ../../home/modules/thokr.nix
         ../../home/modules/delta.nix
         ../../home/modules/gdrive.nix
+        ../../home/modules/cursor.nix
   ];
 
   home = {
