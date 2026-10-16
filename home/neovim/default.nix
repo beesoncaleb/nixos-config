@@ -25,7 +25,7 @@
     enable = true;
     defaultEditor = true;
     
-    colorschemes.onedark = {
+    colorschemes.moonfly = {
       enable = true;
     };
 
