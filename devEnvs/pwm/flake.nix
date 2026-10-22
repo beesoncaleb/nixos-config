@@ -11,10 +11,11 @@
   in {
     devShells."${system}".default = pkgs.mkShell {
       
-      packages = [
-        pkgs.pnpm
-        pkgs.nodejs_26
-        pkgs.prisma-engines_7
+      packages = with pkgs; [
+        pnpm
+        nodejs_26
+        prisma-engines_7
+        python315
       ];
 
       shellHook = ''
