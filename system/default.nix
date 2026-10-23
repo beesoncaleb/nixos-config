@@ -16,6 +16,12 @@
   # Remove password from sudo command
   security.sudo.wheelNeedsPassword = false;
 
+  # Block eMuhdra CA
+  security.pki.caCertificateBlacklist = [
+    "Comodo AAA Services root"
+    "emSign ECC Root CA - G3"
+  ];
+
   services.printing = {
     enable = true;
     drivers = [ pkgs.hplip ];
