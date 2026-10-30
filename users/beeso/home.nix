@@ -44,6 +44,7 @@
       awscli2
       ticktick
       obsidian
+      foliate
 
       # Install agenix cli
       agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
