@@ -16,6 +16,7 @@
         ../../home/modules/delta.nix
         ../../home/modules/gdrive.nix
         ../../home/modules/cursor.nix
+        ../../home/modules/sioyek.nix
   ];
 
   home = {
@@ -45,7 +46,6 @@
       ticktick
       obsidian
       foliate
-      sioyek
 
       # Install agenix cli
       agenix.packages.${pkgs.stdenv.hostPlatform.system}.default
